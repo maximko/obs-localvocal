@@ -1,9 +1,9 @@
 include(ExternalProject)
 include(FetchContent)
 
-set(PREBUILT_WHISPERCPP_VERSION "0.0.7")
+set(PREBUILT_WHISPERCPP_VERSION "main")
 set(PREBUILT_WHISPERCPP_URL_BASE
-    "https://github.com/locaal-ai/occ-ai-dep-whispercpp/releases/download/${PREBUILT_WHISPERCPP_VERSION}")
+    "https://github.com/maximko/occ-ai-dep-whispercpp/releases/download/${PREBUILT_WHISPERCPP_VERSION}")
 
 if(APPLE)
   # check the "MACOS_ARCH" env var to figure out if this is x86 or arm64
@@ -57,7 +57,7 @@ elseif(WIN32)
     set(WHISPER_CPP_HASH "c23862b4aac7d8448cf7de4d339a86498f88ecba6fa7d243bbd7fabdb13d4dd4")
     add_compile_definitions("LOCALVOCAL_WITH_CPU")
   elseif(${ACCELERATION} STREQUAL "cuda")
-    set(WHISPER_CPP_HASH "a0adeaccae76fab0678d016a62b79a19661ed34eb810d8bae3b610345ee9a405")
+    set(WHISPER_CPP_HASH "sf7eb4d90d7770f3de77872195788fb8d00be46b01813c7018324cfbdb534f9c3")
     add_compile_definitions("LOCALVOCAL_WITH_CUDA")
   elseif(${ACCELERATION} STREQUAL "hipblas")
     set(WHISPER_CPP_HASH "bbad0b4eec01c5a801d384c03745ef5e97061958f8cf8f7724281d433d7d92a1")
