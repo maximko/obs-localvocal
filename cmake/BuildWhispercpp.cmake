@@ -52,7 +52,7 @@ elseif(WIN32)
 
   set(ARCH_PREFIX ${ACCELERATION})
   set(WHISPER_CPP_URL
-      "${PREBUILT_WHISPERCPP_URL_BASE}/whispercpp-windows-${ARCH_PREFIX}-${PREBUILT_WHISPERCPP_VERSION}.zip")
+      "https://github.com/maximko/occ-ai-dep-whispercpp/releases/download/untagged-71ef52ce2f86ae175b66/whispercpp-windows-cuda-main.zip")
   if(${ACCELERATION} STREQUAL "cpu")
     set(WHISPER_CPP_HASH "c23862b4aac7d8448cf7de4d339a86498f88ecba6fa7d243bbd7fabdb13d4dd4")
     add_compile_definitions("LOCALVOCAL_WITH_CPU")
