@@ -93,7 +93,6 @@ jobs:
           done
 
       - name: Generate Checksums 🪪
-        if: fromJSON(steps.check.outputs.validTag)
         run: |
           : Generate Checksums 🪪
           if [[ "${RUNNER_DEBUG}" ]]; then set -x; fi
@@ -105,7 +104,6 @@ jobs:
           done
 
       - name: Create Release 🛫
-        if: fromJSON(steps.check.outputs.validTag)
         id: create_release
         uses: softprops/action-gh-release@d4e8205d7e959a9107da6396278b2f1f07af0f9b
         with:
