@@ -75,10 +75,12 @@ function Build {
 
         $CmakeArgs += @(
             '--preset', $Preset
+            '-DLLAMA_AVX2=OFF'
         )
 
         $CmakeBuildArgs += @(
             '--build'
+            '-DLLAMA_AVX2=OFF'
             '--preset', $Preset
             '--config', $Configuration
             '--parallel'
